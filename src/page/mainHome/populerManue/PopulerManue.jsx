@@ -26,6 +26,9 @@ const PopulerManue = () => {
                             item={item} ></MenuItem>)
                     }
                 </div>
+                <div className="w-full flex justify-center my-10">
+                <button className='btn btn-outline '>View Full Menu</button>
+                </div>
             </section>
         </div>
     );

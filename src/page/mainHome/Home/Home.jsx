@@ -1,6 +1,7 @@
 import Banner from "../Bannrer/Banner";
 import BistroBoss from "../bistroBoss/BistroBoss";
 import Category from "../category/Category";
+import Featured from "../Featured/Featured";
 import PopulerManue from "../populerManue/PopulerManue";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
           <Category/> 
           <BistroBoss/>
           <PopulerManue></PopulerManue>
+          <Featured/>
         </div>
     );
 };
