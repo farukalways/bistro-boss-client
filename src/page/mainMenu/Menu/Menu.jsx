@@ -8,18 +8,16 @@ import soupImg from "../../../assets/menu/soup-bg.jpg";
 import useMenu from "../../../hooks/useMenu";
 import SectionTitle from "../../../Componentes/SectionTitle/SectionTitle";
 import MenuCategory from "../MenuCategory/MenuCategory";
-import { useParams } from "react-router-dom";
+
 
 const Menu = () => {
     const [menu] = useMenu();
-    const {category}= useParams();
-    console.log(category);
-    
+
     const desserts = menu.filter(item => item.category === 'dessert')
     const pizza = menu.filter(item => item.category === 'pizza')
     const salad = menu.filter(item => item.category === 'salad')
     const soup = menu.filter(item => item.category === 'soup')
-    const offered = menu.filter(item => item.category === 'offered')
+    const drinks = menu.filter(item => item.category === 'offered')
     return (
         <div>
             <Helmet>
@@ -32,8 +30,8 @@ const Menu = () => {
                 Heading={"Today's Offer"}
                 subHeading={"Don't Miss"}>
             </SectionTitle>
-            {/* offered menu items */}
-            <MenuCategory items={offered}></MenuCategory>
+            {/* drinks menu items */}
+            <MenuCategory items={drinks}></MenuCategory>
             {/* dessert menu items */}
             <MenuCategory items={desserts} title={"dessert"} img={dessertImg}
              ></MenuCategory>
